@@ -10,7 +10,7 @@ jobs:
   mirror:
     uses: aps831/workflows/.github/workflows/bitbucket-mirror.yaml@master
     with:
-      username: aps831-github
-      repositoryname: basic-template
+      username: UPDATE_ME
+      repositoryname: UPDATE_ME
     secrets:
       BITBUCKET_SSH_PRIVATE_KEY: ${{ secrets.BITBUCKET_SSH_PRIVATE_KEY }}
