@@ -10,7 +10,7 @@ jobs:
   mirror:
     uses: aps831/workflows/.github/workflows/bitbucket-mirror.yaml@master
     with:
-      username: UPDATE_ME
-      repositoryname: UPDATE_ME
+      username: aps831-github
+      repositoryname: workflows-testbed-docker
     secrets:
       BITBUCKET_SSH_PRIVATE_KEY: ${{ secrets.BITBUCKET_SSH_PRIVATE_KEY }}
