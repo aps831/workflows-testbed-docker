@@ -1,0 +1,44 @@
+[
+  {
+    "description": "Maven Version",
+    "value": "3.8.2",
+    "files": [
+      {
+        "filePath": "Taskfile.yml",
+        "valuePath": ".env.MAVEN_VERSION"
+      },
+      {
+        "filePath": "pom.xml",
+        "valuePath": ".project.properties.\"version.maven\""
+      },
+      {
+        "filePath": ".sdkmanrc",
+        "valuePath": "maven"
+      }
+    ]
+  },
+  {
+    "description": "Java Version",
+    "value": "11",
+    "files": [
+      {
+        "filePath": "Taskfile.yml",
+        "valuePath": ".env.JAVA_VERSION"
+      },
+      {
+        "filePath": "Taskfile.yml",
+        "valuePath": ".env.FINAL_BASE_IMAGE",
+        "valuePrefix": "eclipse-temurin:"
+      },
+      {
+        "filePath": "pom.xml",
+        "valuePath": ".project.properties.\"version.java\""
+      },
+      {
+        "filePath": ".sdkmanrc",
+        "valuePath": "java",
+        "valueSuffix": ".0.10.hs-adpt"
+      }
+    ]
+  }
+]

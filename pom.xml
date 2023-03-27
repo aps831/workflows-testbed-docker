@@ -11,6 +11,7 @@
         <!-- pProject -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.java>11</version.java>
+        <version.maven>3.8.2</version.maven>
 
         <!-- Dependencies -->
         <version.junit.jupiter>5.9.2</version.junit.jupiter>
@@ -20,6 +21,7 @@
         <version.surefire-plugin>3.0.0-M9</version.surefire-plugin>
         <version.failsafe-plugin>3.0.0-M9</version.failsafe-plugin>
         <version.maven-assembly-plugin>3.5.0</version.maven-assembly-plugin>
+        <version.maven-enforcer-plugin>3.1.0</version.maven-enforcer-plugin>
 
 	</properties>
 
@@ -53,6 +55,27 @@
                     <source>${version.java}</source>
                     <target>${version.java}</target>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${version.maven-enforcer-plugin}</version>
+                <executions>
+                    <execution>
+                        <id>enforce</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>${version.maven}</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
 			<plugin>

@@ -30,6 +30,7 @@ runtimes:
     - node@18.12.1
 actions:
   enabled:
+    - hardcoding-check
     - commit-branch
     - commitizen-prompt-conventional
     - commitizen-tools-check
