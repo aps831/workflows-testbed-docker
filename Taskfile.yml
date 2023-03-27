@@ -1,5 +1,11 @@
 ---
 version: "3"
+env:
+  JAVA_VERSION: 11
+  MAVEN_VERSION: 3.8.2
+  FINAL_BASE_IMAGE: "eclipse-temurin:11"
+  LOCAL_REGISTRY: "titan.local:5000"
+  PROJECT: "workflows-testbed-docker"
 tasks:
   # Static Analysis
   check:
@@ -20,3 +26,53 @@ tasks:
       - trivy fs .
       - semgrep --config=p/security-audit .
       - semgrep --config=p/secrets .
+  # Build
+  tag:
+    summary: Generate build tag
+    desc: Generate build tag
+    silent: true
+    cmds:
+      - |
+        if [ -z "$(git status --porcelain)" ]; then
+          echo $(git rev-parse --short HEAD)
+        else
+          echo "dev-$(date +%s)"
+        fi
+  image:
+    summary: Build deployment images
+    desc: Build deployment images
+    silent: true
+    cmds:
+      - |
+        # Credentials
+        stty -echo
+        read -r -p 'Enter Github Username: ' GITHUB_USER_REF
+        echo ""
+        read -r -p 'Enter Github personal access token with read:packages permissions: ' GITHUB_TOKEN_REF
+        echo ""
+        stty echo
+        export GITHUB_USER_REF=$GITHUB_USER_REF
+        export GITHUB_TOKEN_REF=$GITHUB_TOKEN_REF
+
+        # Clean
+        rm -rf target && mkdir target
+
+        docker pull maven:$MAVEN_VERSION-openjdk-$JAVA_VERSION
+        docker pull $FINAL_BASE_IMAGE
+
+        # Build
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target output --output type=local,dest=target
+
+        # Status
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
+
+        # Image
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+    vars:
+      TAG:
+        sh: task tag
+  build:
+    summary: Build Java projects on host
+    desc: Build Java projects on host
+    cmds:
+      - mvn clean install -Denforcer.fail=false
