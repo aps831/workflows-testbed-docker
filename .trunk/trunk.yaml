@@ -1,24 +1,25 @@
 version: 0.1
 cli:
-  version: 1.6.1
+  version: 1.8.0
   sha256:
-    darwin_arm64: f4a003055ae3958d3b81eb178ae31d6f26ab768374caaf1e9f2bfa5740ed516a
-    darwin_x86_64: 11561451eab6b792a6395cb98a41f2366eca4ca0bfd05a6b267e959495071628
-    linux_x86_64: ce29a36c7c69b25b5b0e572fe30ccc179b03e0d89d8207260fa95c671fcade00
+    darwin_arm64: f27d3085cc07da73bde8d7106fd8cbe7130794790545b5453111035f55d8dbb7
+    darwin_x86_64: 9d46bcb78ec9d40a4ce09906b068f23a4fa45582c9e0c85c83906f5c8ac97e4d
+    linux_x86_64: cf0ba993e9eb4aa399772281b62533ce6d3a61214a02a5ccba6364a4fcd5af96
 plugins:
   sources:
     - id: aps831
-      ref: v2.0.0
+      ref: v2.1.0
       uri: https://github.com/aps831/trunk-io-plugins
     - id: trunk
-      ref: v0.0.13
+      ref: v0.0.16
       uri: https://github.com/trunk-io/plugins
 lint:
   enabled:
+    - yamllint@1.30.0
     - hadolint@2.12.0
-    - actionlint@1.6.23
+    - actionlint@1.6.24
     - git-diff-check
-    - gitleaks@8.16.1
+    - gitleaks@8.16.2
     - markdownlint@0.33.0
     - prettier@2.8.7
     - shellcheck@0.9.0
