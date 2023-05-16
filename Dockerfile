@@ -30,7 +30,7 @@ FROM build AS status
 COPY --from=build /app/EXIT_STATUS_FILE/ /EXIT_STATUS_FILE
 RUN exit $(cat /EXIT_STATUS_FILE)
 
-FROM eclipse-temurin:11@sha256:9de4aabba13e1dd532283497f98eff7bc89c2a158075f0021d536058d3f5a082
+FROM eclipse-temurin:20@sha256:37a9c05c88200f7cb2d585267e9c9c94055d6bd25d3eeb7dbfcc663bc98023e8
 RUN mkdir /opt/app
 COPY --from=build /app/target/testbed-docker-1.0.0-jar-with-dependencies.jar /opt/app
 CMD ["java", "-jar", "/opt/app/testbed-docker-1.0.0-jar-with-dependencies.jar"]
