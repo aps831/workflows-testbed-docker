@@ -1,9 +1,5 @@
 # syntax=docker/dockerfile:1.3
-ARG MAVEN_VERSION
-ARG JAVA_VERSION
-ARG FINAL_BASE_IMAGE
-
-FROM maven:$MAVEN_VERSION-openjdk-$JAVA_VERSION AS build
+FROM maven:3.8.2-openjdk-11@sha256:4b9d059560ebaed5bcdd320be71968c457b655887bf04380c150c22531dd9e7a AS build
 ARG ENFORCER_FAIL
 
 RUN groupadd -r -g 1000 maven && useradd -m -l -r -u 1000 -g maven maven
@@ -34,7 +30,7 @@ FROM build AS status
 COPY --from=build /app/EXIT_STATUS_FILE/ /EXIT_STATUS_FILE
 RUN exit $(cat /EXIT_STATUS_FILE)
 
-FROM $FINAL_BASE_IMAGE
+FROM eclipse-temurin:11@sha256:9de4aabba13e1dd532283497f98eff7bc89c2a158075f0021d536058d3f5a082
 RUN mkdir /opt/app
 COPY --from=build /app/target/testbed-docker-1.0.0-jar-with-dependencies.jar /opt/app
 CMD ["java", "-jar", "/opt/app/testbed-docker-1.0.0-jar-with-dependencies.jar"]

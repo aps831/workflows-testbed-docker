@@ -1,9 +1,6 @@
 ---
 version: "3"
 env:
-  JAVA_VERSION: 11
-  MAVEN_VERSION: 3.8.2
-  FINAL_BASE_IMAGE: "eclipse-temurin:11"
   LOCAL_REGISTRY: "titan.local:5000"
   PROJECT: "workflows-testbed-docker"
 tasks:
@@ -57,17 +54,14 @@ tasks:
         # Clean
         rm -rf target && mkdir target
 
-        docker pull maven:$MAVEN_VERSION-openjdk-$JAVA_VERSION
-        docker pull $FINAL_BASE_IMAGE
-
         # Build
-        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target output --output type=local,dest=target
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target output --output type=local,dest=target
 
         # Status
-        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
 
         # Image
-        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg MAVEN_VERSION="$MAVEN_VERSION" --build-arg JAVA_VERSION="$JAVA_VERSION" --build-arg ENFORCER_FAIL=false --build-arg FINAL_BASE_IMAGE="$FINAL_BASE_IMAGE" --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+        docker build -f Dockerfile . --progress=plain --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
     vars:
       TAG:
         sh: task tag

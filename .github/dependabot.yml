@@ -9,3 +9,11 @@ updates:
       - "aps831"
     labels:
       - "github_actions"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "aps831"
+    labels:
+      - "dependencies"
