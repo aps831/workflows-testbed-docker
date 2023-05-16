@@ -5,5 +5,8 @@ on:
   workflow_dispatch:
   pull_request:
 jobs:
-  build:
+  check:
+    permissions:
+      contents: read
+      pull-requests: read
     uses: aps831/workflows/.github/workflows/gitleaks.yaml@master
