@@ -9,6 +9,7 @@ updates:
       - "aps831"
     labels:
       - "github_actions"
+      - "no_ci_cd_run"
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
@@ -17,3 +18,4 @@ updates:
       - "aps831"
     labels:
       - "dependencies"
+      - "no_ci_cd_run"
