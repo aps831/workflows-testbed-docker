@@ -9,3 +9,7 @@ on:
 jobs:
   semgrep:
     uses: aps831/workflows/.github/workflows/semgrep.yaml@master
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read

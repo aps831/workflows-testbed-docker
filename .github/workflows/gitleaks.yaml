@@ -10,3 +10,7 @@ jobs:
       contents: read
       pull-requests: read
     uses: aps831/workflows/.github/workflows/gitleaks.yaml@master
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
