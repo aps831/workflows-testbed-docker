@@ -15,7 +15,7 @@
         "valuePath": ".project.properties.\"version.maven\""
       },
       {
-        "filePath": ".sdkmanrc",
+        "filePath": ".tool-versions",
         "valuePath": "maven"
       }
     ]
@@ -36,9 +36,10 @@
         "valuePath": ".project.properties.\"version.java\""
       },
       {
-        "filePath": ".sdkmanrc",
+        "filePath": ".tool-versions",
         "valuePath": "java",
-        "valueSuffix": ".0.10.hs-adpt"
+        "valuePrefix": "adoptopenjdk-",
+        "valueSuffix": ".0.20+8"
       }
     ]
   }
