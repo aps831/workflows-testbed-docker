@@ -4,12 +4,6 @@ env:
   LOCAL_REGISTRY: "titan.local:5000"
   PROJECT: "workflows-testbed-docker"
 tasks:
-  # Static Analysis
-  check:
-    summary: Run Trunk check
-    desc: Run Trunk check
-    cmds:
-      - trunk check
   # Build
   tag:
     summary: Generate build tag
