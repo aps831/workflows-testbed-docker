@@ -22,6 +22,7 @@
         <version.failsafe-plugin>3.0.0-M9</version.failsafe-plugin>
         <version.maven-assembly-plugin>3.5.0</version.maven-assembly-plugin>
         <version.maven-enforcer-plugin>3.1.0</version.maven-enforcer-plugin>
+        <version.cyclonedx-maven-plugin>2.7.9</version.cyclonedx-maven-plugin>
 
 	</properties>
 
@@ -128,6 +129,23 @@
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+                <version>${version.cyclonedx-maven-plugin}</version>
+                <configuration>
+                    <outputName>${project.artifactId}-${project.version}-cyclonedx</outputName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>makeAggregateBom</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
