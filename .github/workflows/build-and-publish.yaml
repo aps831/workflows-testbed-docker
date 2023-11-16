@@ -1,0 +1,26 @@
+name: Build and Publish Package
+on:
+  push:
+    branches:
+      - "master"
+      - "prerelease"
+  pull_request: {}
+jobs:
+  build:
+    permissions:
+      contents: write
+      packages: write
+      issues: write
+      pull-requests: write
+    uses: aps831/workflows/.github/workflows/publish-maven-docker-image.yaml@refactor/build-release
+    with:
+      image-name: "workflows-testbed-docker"
+      prerelease-branch: "prerelease"
+      update-branch-base: "chore/publish-update"
+      tag-prefix: "v"
+      templated-files: |
+        README.tpl.md
+        README2.tpl.md
+      settings-file: "settings.xml"
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
