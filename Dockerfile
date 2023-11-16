@@ -25,7 +25,7 @@ RUN --mount=type=cache,uid=1000,gid=1000,target=/home/maven/.m2\
 
 RUN mkdir -p target && touch target/.nonempty
 
-FROM scratch AS output
+FROM scratch AS target
 COPY --from=build /app/target/ /
 
 FROM build AS status
