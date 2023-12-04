@@ -12,6 +12,7 @@ jobs:
       packages: write
       issues: write
       pull-requests: write
+      actions: read
     uses: aps831/workflows/.github/workflows/publish-maven-docker-image-artifact.yaml@refactor/build-release
     with:
       image-name: "workflows-testbed-docker"
