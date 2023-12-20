@@ -16,6 +16,8 @@ All notable changes to this project will be documented in this file.
 - Use issue comment trigger [skip ci]
 - Update for v0.6.0 release [skip ci]
 - Update pom version to 0.6.1-SNAPSHOT [skip ci]
+- Update for v0.6.0 release [skip ci]
+- Update pom version to 0.6.1-SNAPSHOT [skip ci]
 
 ## [0.5.2] - 2023-11-16
 
