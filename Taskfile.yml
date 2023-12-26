@@ -1,6 +1,8 @@
 ---
 version: "3"
 env:
+  DOPPLER_PROJECT: "development"
+  DOPPLER_CONFIG: "github"
   LOCAL_REGISTRY: "titan.local:5000"
   PROJECT: "workflows-testbed-docker"
 tasks:
@@ -23,14 +25,9 @@ tasks:
     cmds:
       - |
         # Credentials
-        stty -echo
-        read -r -p 'Enter Github Username: ' GITHUB_USER_REF
-        echo ""
-        read -r -p 'Enter Github personal access token with read:packages permissions: ' GITHUB_TOKEN_REF
-        echo ""
-        stty echo
-        export GITHUB_USER_REF=$GITHUB_USER_REF
-        export GITHUB_TOKEN_REF=$GITHUB_TOKEN_REF
+        [ -n "$DOPPLER_DEVELOPMENT_GITHUB_TOKEN" ] && export DOPPLER_TOKEN=$DOPPLER_DEVELOPMENT_GITHUB_TOKEN
+        export GITHUB_USER_REF=$(doppler secrets get GITHUB_USER --plain)
+        export GITHUB_TOKEN_REF=$(doppler secrets get GITHUB_TOKEN_READ_PACKAGES --plain)
 
         version=$(xmlstarlet sel -N mvn='http://maven.apache.org/POM/4.0.0' -t -m '/mvn:project/mvn:version' -v . -n <pom.xml)
 
@@ -54,6 +51,7 @@ tasks:
     desc: Build Java projects on host
     cmds:
       - mvn clean install -Denforcer.fail=false
+  # tool-versions
   tool-versions:upgrade:repo:
     summary: Upgrade version in .tool-versions
     desc: Upgrade version in .tool-versions
@@ -61,7 +59,8 @@ tasks:
     silent: true
     cmds:
       - |
-        version=$(gh api -H "Accept: application/vnd.github+json" repos/{{ .OWNER }}/{{ .NAME }}/releases/latest | jq .tag_name -r)
+        [[ "{{ .REPONAME }}" == "" ]] && REPONAME={{ .NAME }} || REPONAME={{ .REPONAME }}
+        version=$(gh api -H "Accept: application/vnd.github+json" repos/{{ .OWNER }}/$REPONAME/releases/latest | jq .tag_name -r)
         version=${version//v}
         sed -i "s/{{ .NAME }}.*/{{ .NAME }} $version/g" .tool-versions
   tool-versions:upgrade:
@@ -70,6 +69,7 @@ tasks:
     cmds:
       - task: tool-versions:upgrade:trivy
       - task: tool-versions:upgrade:task
+      - task: tool-versions:upgrade:doppler
   tool-versions:upgrade:trivy:
     summary: Upgrade version of trivy in .tool-versions
     desc: Upgrade version of trivy .tool-versions
@@ -86,6 +86,16 @@ tasks:
         vars:
           OWNER: go-task
           NAME: task
+  tool-versions:upgrade:doppler:
+    summary: Upgrade version of doppler in .tool-versions
+    desc: Upgrade version of doppler .tool-versions
+    cmds:
+      - task: tool-versions:upgrade:repo
+        vars:
+          OWNER: DopplerHQ
+          REPONAME: cli
+          NAME: doppler
+  # semgrep
   semgrep:auto:
     summary: Run semgrep static analysis with auto config
     desc: Run semgrep static analysis with auto config
@@ -104,6 +114,7 @@ tasks:
     silent: true
     cmds:
       - semgrep --config=p/secrets .
+  # trivy
   trivy:fs:
     summary: Run trivy fs check
     desc: Run trivy fs check
