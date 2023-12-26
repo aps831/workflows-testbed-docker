@@ -1,13 +1,10 @@
+---
 name: Build and Publish Package
 on:
   push:
     branches:
       - "master"
       - "prerelease"
-  # pull_request: {}
-  # issue_comment:
-  #   types:
-  #     - created
 jobs:
   build:
     permissions:
@@ -15,7 +12,7 @@ jobs:
       packages: write
       issues: write
       pull-requests: write
-    uses: aps831/workflows/.github/workflows/publish-maven-docker-image-artifact.yaml@master
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@master
     with:
       image-name: "workflows-testbed-docker"
       templated-files: README.tpl.md
