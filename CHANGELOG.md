@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.0] - 2023-12-26
+
+### Features
+
+- Test
+- Test
+- Test
+- Another test
+- Yet another test
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.6.1-SNAPSHOT [skip ci]
+- Use doppler for github token
+- Update build and publish workflow
+
 ## [0.6.0] - 2023-12-20
 
 ### Features
@@ -18,6 +34,7 @@ All notable changes to this project will be documented in this file.
 - Update pom version to 0.6.1-SNAPSHOT [skip ci]
 - Update for v0.6.0 release [skip ci]
 - Update pom version to 0.6.1-SNAPSHOT [skip ci]
+- Update for v0.6.0 release [skip ci]
 
 ## [0.5.2] - 2023-11-16
 
