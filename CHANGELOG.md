@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.10.0] - 2023-12-27
+
+### Features
+
+- Use access token
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.9.1-SNAPSHOT [skip ci]
+
 ## [0.9.0] - 2023-12-27
 
 ### Features
@@ -11,6 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.8.1-SNAPSHOT [skip ci]
+- Update for v0.9.0 release [skip ci]
 
 ## [0.8.0] - 2023-12-27
 
