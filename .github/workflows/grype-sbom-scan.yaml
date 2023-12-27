@@ -1,0 +1,16 @@
+---
+name: Grype SBOM Scan
+on:
+  schedule:
+    - "* 4 10 * *"
+  release: {}
+jobs:
+  build:
+    permissions:
+      contents: read
+    uses: aps831/workflows/.github/workflows/grype-sbom-scan.yaml@feat/scanning-workflows
+    with:
+      sbom-name: "*cyclonedx.json"
+      release-tag: ${{ github.event.release.tag_name }}
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}

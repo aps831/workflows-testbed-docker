@@ -1,0 +1,16 @@
+---
+name: Grype Image Scan
+on:
+  schedule:
+    - "* 4 10 * *"
+  registry_package: {}
+jobs:
+  build:
+    permissions:
+      packages: read
+    uses: aps831/workflows/.github/workflows/grype-image-scan.yaml@feat/scanning-workflows
+    with:
+      image-name: ${{ github.event.package.package_version.name }}
+      tag: ${{ github.event.package.package_version.container_metadata.tag.name }}
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
