@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.9.0] - 2023-12-27
+
+### Features
+
+- Update triggers
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.8.1-SNAPSHOT [skip ci]
+
 ## [0.8.0] - 2023-12-27
 
 ### Features
@@ -13,6 +23,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.7.1-SNAPSHOT [skip ci]
+- Update for v0.8.0 release [skip ci]
 
 ## [0.7.0] - 2023-12-26
 
