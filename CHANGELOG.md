@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] - 2023-12-27
+
+### Features
+
+- Test scanning workflows
+- Test scanning workflows
+- Test scanning workflows
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.7.1-SNAPSHOT [skip ci]
+
 ## [0.7.0] - 2023-12-26
 
 ### Features
@@ -17,6 +29,7 @@ All notable changes to this project will be documented in this file.
 - Update pom version to 0.6.1-SNAPSHOT [skip ci]
 - Use doppler for github token
 - Update build and publish workflow
+- Update for v0.7.0 release [skip ci]
 
 ## [0.6.0] - 2023-12-20
 
