@@ -18,4 +18,4 @@ jobs:
       templated-files: README.tpl.md
       settings-file: "settings.xml"
     secrets:
-      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events
