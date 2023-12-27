@@ -3,7 +3,9 @@ name: Trivy Image Scan
 on:
   schedule:
     - cron: "0 4 10 * *"
-  registry_package: {}
+  registry_package:
+    types:
+      - published
 jobs:
   build:
     permissions:
