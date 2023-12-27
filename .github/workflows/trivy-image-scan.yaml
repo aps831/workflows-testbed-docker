@@ -8,11 +8,13 @@ on:
       - published
 jobs:
   scan:
+    if: ${{ github.event.registry_package.package_version.container_metadata.tag.name != 'latest'}}
     permissions:
       packages: read
     uses: aps831/workflows/.github/workflows/trivy-image-scan.yaml@feat/scanning-workflows
     with:
-      image-name: ${{ github.event.registry_package.name }}
+      owner: ${{ github.event.repository }}
+      name: ${{ github.event.registry_package.name }}
       tag: ${{ github.event.registry_package.package_version.container_metadata.tag.name }}
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
