@@ -7,12 +7,13 @@ on:
     types:
       - published
 jobs:
-  build:
+  scan:
+    if: ${{ github.event.registry_package.package_version.container_metadata.tag.name != 'latest' }}
     permissions:
       packages: read
     uses: aps831/workflows/.github/workflows/grype-image-scan.yaml@feat/scanning-workflows
     with:
-      image-name: ${{ github.event.package.package_version.name }}
-      tag: ${{ github.event.package.package_version.container_metadata.tag.name }}
+      image-name: ${{ github.event.registry_package.package_version.name }}
+      tag: ${{ github.event.registry_package.package_version.container_metadata.tag.name }}
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
