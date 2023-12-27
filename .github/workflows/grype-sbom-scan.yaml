@@ -2,7 +2,7 @@
 name: Grype SBOM Scan
 on:
   schedule:
-    - "* 4 10 * *"
+    - cron: "0 4 10 * *"
   release: {}
 jobs:
   build:
