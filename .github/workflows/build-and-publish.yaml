@@ -5,13 +5,13 @@ on:
     branches:
       - "master"
       - "prerelease"
+permissions:
+  contents: write
+  packages: write
+  issues: write
+  pull-requests: write
 jobs:
   build:
-    permissions:
-      contents: write
-      packages: write
-      issues: write
-      pull-requests: write
     uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@master
     with:
       image-name: "workflows-testbed-docker"
