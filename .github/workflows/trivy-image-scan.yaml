@@ -11,7 +11,7 @@ permissions:
 jobs:
   scan:
     if: ${{ github.event.registry_package.package_version.container_metadata.tag.name != 'latest' }}
-    uses: aps831/workflows/.github/workflows/trivy-image-scan.yaml@feat/scanning-workflows
+    uses: aps831/workflows/.github/workflows/trivy-image-scan.yaml@master
     with:
       owner: ${{ github.repository_owner }}
       name: ${{ github.event.registry_package.name }}
