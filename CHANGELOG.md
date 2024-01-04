@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.15.0] - 2024-01-04
+
+### Features
+
+- Test
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.14.1-SNAPSHOT [skip ci]
+- Move permissions to top level [skip ci]
+
 ## [0.14.0] - 2023-12-27
 
 ### Features
@@ -11,6 +22,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.13.1-SNAPSHOT [skip ci]
+- Update for v0.14.0 release [skip ci]
 
 ## [0.13.0] - 2023-12-27
 
