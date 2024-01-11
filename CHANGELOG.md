@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.22.0] - 2024-01-11
+
+### Features
+
+- Test with slash
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.21.1-SNAPSHOT [skip ci]
+
 ## [0.21.0] - 2024-01-11
 
 ### Features
@@ -12,6 +22,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.20.1-SNAPSHOT [skip ci]
+- Update for v0.21.0 release [skip ci]
 
 ## [0.20.0] - 2024-01-10
 
@@ -203,7 +214,6 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Test
 - Test
 - Test
 
