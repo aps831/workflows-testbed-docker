@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.21.0] - 2024-01-11
+
+### Features
+
+- Add label to docker
+- Correct image name
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.20.1-SNAPSHOT [skip ci]
+
 ## [0.20.0] - 2024-01-10
 
 ### Features
@@ -11,6 +22,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.19.1-SNAPSHOT [skip ci]
+- Update for v0.20.0 release [skip ci]
 
 ## [0.19.0] - 2024-01-04
 
@@ -191,7 +203,6 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Test
 - Test
 - Test
 - Test
