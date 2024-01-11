@@ -36,6 +36,7 @@ FROM eclipse-temurin:11@sha256:9de4aabba13e1dd532283497f98eff7bc89c2a158075f0021
 ARG BUILDKIT_SBOM_SCAN_CONTEXT=true
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
 ARG ARTIFACT_VERSION
+LABEL org.opencontainers.image.source=https://github.com/aps831/workflows-testbed-docker
 RUN mkdir /opt/app
 COPY --from=build /app/target/testbed-docker-$ARTIFACT_VERSION-jar-with-dependencies.jar /opt/app
 CMD ["java", "-jar", "/opt/app/testbed-docker-$ARTIFACT_VERSION-jar-with-dependencies.jar"]
