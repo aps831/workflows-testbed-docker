@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.23.0] - 2024-01-14
+
+### Features
+
+- Test split of build into release and publish
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.22.1-SNAPSHOT [skip ci]
+
 ## [0.22.0] - 2024-01-11
 
 ### Features
@@ -11,6 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.21.1-SNAPSHOT [skip ci]
+- Update for v0.22.0 release [skip ci]
 
 ## [0.21.0] - 2024-01-11
 
@@ -214,7 +225,6 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Test
 - Test
 
 ### Miscellaneous Tasks
