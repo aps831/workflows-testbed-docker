@@ -1,0 +1,46 @@
+[
+  {
+    "description": "Maven Version",
+    "value": "3.8.2",
+    "files": [
+      {
+        "filePath": "Dockerfile",
+        "valuePath": ".FROM[0]",
+        "valuePrefix": "maven:",
+        "valueSuffix": "-openjdk",
+        "partialMatch": true
+      },
+      {
+        "filePath": "pom.xml",
+        "valuePath": ".project.properties.\"version.maven\""
+      },
+      {
+        "filePath": ".tool-versions",
+        "valuePath": "maven"
+      }
+    ]
+  },
+  {
+    "description": "Java Version",
+    "value": "11",
+    "files": [
+      {
+        "filePath": "Dockerfile",
+        "valuePath": ".FROM[0]",
+        "valuePrefix": "openjdk-",
+        "valueSuffix": "@",
+        "partialMatch": true
+      },
+      {
+        "filePath": "pom.xml",
+        "valuePath": ".project.properties.\"version.java\""
+      },
+      {
+        "filePath": ".tool-versions",
+        "valuePath": "java",
+        "valuePrefix": "adoptopenjdk-",
+        "valueSuffix": ".0.20+8"
+      }
+    ]
+  }
+]
