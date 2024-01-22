@@ -1,8 +1,6 @@
 ---
 name: Grype Image Scan
 on:
-  schedule:
-    - cron: "0 0 22 * *"
   registry_package:
     types:
       - published
