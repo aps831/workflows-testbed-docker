@@ -1,0 +1,13 @@
+---
+name: Trivy Image Scan Dispatched
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 4 1 * *
+permissions:
+  packages: read
+jobs:
+  scan:
+    uses: aps831/workflows/.github/workflows/trivy-image-scan-dispatched.yaml@feat/image-scans
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}

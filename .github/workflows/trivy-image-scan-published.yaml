@@ -1,5 +1,5 @@
 ---
-name: Grype Image Scan
+name: Trivy Image Scan Published
 on:
   registry_package:
     types:
@@ -9,7 +9,7 @@ permissions:
 jobs:
   scan:
     if: ${{ github.event.registry_package.package_version.container_metadata.tag.name != 'latest' }}
-    uses: aps831/workflows/.github/workflows/grype-image-scan.yaml@master
+    uses: aps831/workflows/.github/workflows/trivy-image-scan-published.yaml@feat/image-scans
     with:
       owner: ${{ github.repository_owner }}
       name: ${{ github.event.registry_package.name }}
