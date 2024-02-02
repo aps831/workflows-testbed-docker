@@ -8,6 +8,6 @@ permissions:
   packages: read
 jobs:
   scan:
-    uses: aps831/workflows/.github/workflows/grype-image-scan-dispacthed.yaml@feat/image-scans
+    uses: aps831/workflows/.github/workflows/grype-image-scan-dispatched.yaml@feat/image-scans
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
