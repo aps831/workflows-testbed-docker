@@ -15,4 +15,4 @@ jobs:
       name: ${{ github.event.registry_package.name }}
       tag: ${{ github.event.registry_package.package_version.container_metadata.tag.name }}
     secrets:
-      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
