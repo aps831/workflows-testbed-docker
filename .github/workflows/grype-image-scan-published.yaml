@@ -9,7 +9,7 @@ permissions:
 jobs:
   scan:
     if: ${{ github.event.registry_package.package_version.container_metadata.tag.name != 'latest' }}
-    uses: aps831/workflows/.github/workflows/grype-image-scan-published.yaml@feat/image-scans
+    uses: aps831/workflows/.github/workflows/grype-image-scan-published.yaml@master
     with:
       owner: ${{ github.repository_owner }}
       name: ${{ github.event.registry_package.name }}
