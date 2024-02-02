@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.27.0] - 2024-02-02
+
+### Features
+
+- Publish new image
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.26.1-SNAPSHOT [skip ci]
+
 ## [0.26.0] - 2024-02-02
 
 ### Features
@@ -11,6 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.25.1-SNAPSHOT [skip ci]
+- Update for v0.26.0 release [skip ci]
 
 ## [0.25.0] - 2024-02-02
 
