@@ -51,6 +51,18 @@ tasks:
     desc: Build Java projects on host
     cmds:
       - mvn clean install -Denforcer.fail=false
+  cosign:
+    summary: Create and set cosign password and keys
+    desc: Create and set cosign password and keys
+    silent: true
+    cmds:
+      - |
+        export COSIGN_PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+        echo $COSIGN_PASSWORD | gh secret set COSIGN_PASSWORD
+        NAME_WITH_OWNER=$(gh repo view --json="nameWithOwner" --jq=".nameWithOwner")
+        export GITHUB_TOKEN=$(doppler secrets get GITHUB_TOKEN_REPO_ADMIN_PUBLIC_KEY --plain)
+        cosign generate-key-pair github://$NAME_WITH_OWNER
+        rm cosign.pub
   # tool-versions
   tool-versions:upgrade:repo:
     summary: Upgrade version in .tool-versions
