@@ -12,7 +12,7 @@ permissions:
   pull-requests: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@master
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@feat/cosign
     with:
       image-name: "workflows-testbed-docker"
       templated-files: README.tpl.md
