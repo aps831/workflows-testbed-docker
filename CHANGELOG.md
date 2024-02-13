@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.27.7] - 2024-02-13
+
+### Bug Fixes
+
+- Test publish
+- Test publish
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.27.6-SNAPSHOT [skip ci]
+
 ## [0.27.5] - 2024-02-13
 
 ### Bug Fixes
@@ -11,6 +22,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.27.5-SNAPSHOT [skip ci]
+- Update for v0.27.5 release [skip ci]
 
 ## [0.27.4] - 2024-02-13
 
