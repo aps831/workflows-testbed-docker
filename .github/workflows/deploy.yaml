@@ -23,3 +23,4 @@ jobs:
         with:
           image-from: "workflows-testbed-docker:${{ inputs.tag }}"
           image-to: "ghcr.io/aps831/workflows-testbed-docker:XX"
+          COSIGN_PUBLIC_KEY: ${{ secrets.COSIGN_PUBLIC_KEY }}
