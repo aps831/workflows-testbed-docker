@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.27.3] - 2024-02-13
+
+### Bug Fixes
+
+- Test publish
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.27.3-SNAPSHOT [skip ci]
+
 ## [0.27.2] - 2024-02-13
 
 ### Bug Fixes
@@ -17,6 +27,7 @@ All notable changes to this project will be documented in this file.
 - Update branch to test cosign [skip ci]
 - Add task for generate cosign password and keys [skip ci]
 - Pass cosign keys to workflow
+- Update for v0.27.2 release [skip ci]
 
 ## [0.27.0] - 2024-02-02
 
