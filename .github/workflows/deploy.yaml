@@ -19,7 +19,7 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      - uses: aps831/gh-actions/github-packages-docker-push@feat/docker-verify
+      - uses: aps831/gh-actions/github-packages-docker-push@master
         with:
           image-from: "workflows-testbed-docker:${{ inputs.tag }}"
           image-to: "ghcr.io/aps831/workflows-testbed-docker:XX"
