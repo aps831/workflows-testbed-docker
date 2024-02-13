@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.28.0] - 2024-02-13
+
+### Features
+
+- Test cosign verify
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.27.10-SNAPSHOT [skip ci]
+- Update branch name [skip ci]
+
 ## [0.27.9] - 2024-02-13
 
 ### Bug Fixes
@@ -14,6 +25,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.27.6-SNAPSHOT [skip ci]
+- Update for v0.27.9 release [skip ci]
 
 ## [0.27.5] - 2024-02-13
 
