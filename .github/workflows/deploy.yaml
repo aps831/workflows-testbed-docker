@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Deploy Application
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag
+        required: true
+permissions:
+  contents: write
+  pull-requests: write
+  deployments: write
+  checks: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aps831/gh-actions/login-github-ghcr@master
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - uses: aps831/gh-actions/github-packages-docker-push@feat/docker-verify
+        with:
+          image-from: "ghcr.io/aps831/workflows-testbed-docker:${{ inputs.tag }}"
+          image-to: "ghcr.io/aps831/workflows-testbed-docker:XX"
