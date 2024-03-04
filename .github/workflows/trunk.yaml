@@ -4,8 +4,7 @@ on:
   pull_request: {}
 permissions:
   contents: read
-  issues: read
-  pull-requests: read
+  checks: write
 jobs:
   check:
     name: trunk check
