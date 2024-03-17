@@ -29,19 +29,17 @@ tasks:
         export GITHUB_USER_REF=$(doppler secrets get GITHUB_USER --plain)
         export GITHUB_TOKEN_REF=$(doppler secrets get GITHUB_TOKEN_READ_PACKAGES --plain)
 
-        version=$(xmlstarlet sel -N mvn='http://maven.apache.org/POM/4.0.0' -t -m '/mvn:project/mvn:version' -v . -n <pom.xml)
-
         # Clean
         rm -rf target && mkdir target
 
         # Build
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target target --output type=local,dest=target
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target target --output type=local,dest=target
 
         # Status
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
 
         # Image
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
 
     vars:
       TAG:
