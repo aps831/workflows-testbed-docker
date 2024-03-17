@@ -35,13 +35,13 @@ tasks:
         rm -rf target && mkdir target
 
         # Build
-        docker build -f Dockerfile . --progress=plain --sbom=true --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target output --output type=local,dest=target
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target output --output type=local,dest=target
 
         # Status
-        docker build -f Dockerfile . --progress=plain --sbom=true --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
 
         # Image
-        docker build -f Dockerfile . --progress=plain --sbom=true --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --build-arg ARTIFACT_VERSION=$version --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
 
     vars:
       TAG:
