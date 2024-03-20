@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.29.0] - 2024-03-20
+
+### Features
+
+- Test cosign verify
+- Test
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.27.10-SNAPSHOT [skip ci]
+- Update branch name [skip ci]
+- Fix image name [skip ci]
+- Pass cosign public key [skip ci]
+- Update branch name [skip ci]
+- Fix permissions for trunk
+- Add default value for enforcer fail in dockerfile [skip ci]
+
+### Build
+
+- Do not use sbom
+- Fix target in docker build
+- Remove artifact version from dockerfile
+- Add default value for maven phase in dockerfile
+
 ## [0.27.9] - 2024-02-13
 
 ### Bug Fixes
@@ -14,6 +38,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.27.6-SNAPSHOT [skip ci]
+- Update for v0.27.9 release [skip ci]
 
 ## [0.27.5] - 2024-02-13
 
