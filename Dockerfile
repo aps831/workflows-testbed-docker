@@ -2,7 +2,7 @@
 FROM maven:3.8.2-openjdk-11@sha256:4b9d059560ebaed5bcdd320be71968c457b655887bf04380c150c22531dd9e7a AS build
 ARG BUILDKIT_SBOM_SCAN_CONTEXT=true
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
-ARG ENFORCER_FAIL
+ARG ENFORCER_FAIL=true
 
 RUN groupadd -r -g 1000 maven && useradd -m -l -r -u 1000 -g maven maven
 ENV MAVEN_CONFIG /home/maven/.m2
