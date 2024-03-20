@@ -12,7 +12,7 @@ USER maven
 WORKDIR /app
 COPY --chown=maven:maven . /app
 
-ARG MAVEN_PHASE
+ARG MAVEN_PHASE="clean install"
 RUN --mount=type=cache,uid=1000,gid=1000,target=/home/maven/.m2\
     --mount=type=secret,uid=1000,gid=1000,id=GITHUB_USER_REF\
     --mount=type=secret,uid=1000,gid=1000,id=GITHUB_TOKEN_REF\
