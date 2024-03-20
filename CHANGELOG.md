@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.30.0] - 2024-03-20
+
+### Features
+
+- Test
+- Test
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.29.1-SNAPSHOT [skip ci]
+
 ## [0.29.0] - 2024-03-20
 
 ### Features
@@ -18,6 +29,7 @@ All notable changes to this project will be documented in this file.
 - Update branch name [skip ci]
 - Fix permissions for trunk
 - Add default value for enforcer fail in dockerfile [skip ci]
+- Update for v0.29.0 release [skip ci]
 
 ### Build
 
