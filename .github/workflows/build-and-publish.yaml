@@ -16,7 +16,6 @@ jobs:
     with:
       image-name-1: "workflows-testbed-docker"
       templated-files: README.tpl.md
-      settings-file: "settings.xml"
     secrets:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events
       COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
