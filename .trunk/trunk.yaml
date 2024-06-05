@@ -1,35 +1,35 @@
 version: 0.1
 cli:
-  version: 1.19.0
+  version: 1.22.1
   sha256:
-    darwin_arm64: e1ccfde855390e2bf84b01b03887498093ee31681a622d0dbe95f989f7fa4bb2
-    darwin_x86_64: ff87f0ce73c94ffbd96042b49c79920d279e4f890d65ee52e1bca4ca00904af8
-    linux_x86_64: cf308bfd6baa1833a9bac5aef77f90f09b6de2ce905ee032dea6ab5ba099db15
+    darwin_arm64: be937c5e7b94461b58b4eee95cfab79d3eed816183ccacefc0f1b9d1c14fe20c
+    darwin_x86_64: 3f496405112b1e0e55dfced29ba2fc8d57cf8142e12ae7a4ce39a331a9791b0f
+    linux_x86_64: f4704ed97a727648f7a0d442f88cebeecc2c687c4866fb8e771d39ca33372c2f
 plugins:
   sources:
     - id: aps831
-      ref: v2.2.1
+      ref: v2.3.0
       uri: https://github.com/aps831/trunk-io-plugins
     - id: trunk
-      ref: v1.4.2
+      ref: v1.5.0
       uri: https://github.com/trunk-io/plugins
 lint:
   disabled:
     - terraform-validate
   enabled:
-    - checkov@3.1.67
-    - osv-scanner@1.6.1
-    - terrascan@1.18.11
-    - trufflehog@3.63.10
-    - trivy@0.48.3
-    - yamllint@1.33.0
+    - checkov@3.2.125
+    - osv-scanner@1.7.4
+    - terrascan@1.19.1
+    - trufflehog@3.78.0
+    - trivy@0.52.0
+    - yamllint@1.35.1
     - hadolint@2.12.0
-    - actionlint@1.6.26
+    - actionlint@1.7.1
     - git-diff-check
-    - gitleaks@8.18.1
-    - markdownlint@0.38.0
-    - prettier@3.2.4
-    - shellcheck@0.9.0
+    - gitleaks@8.18.3
+    - markdownlint@0.41.0
+    - prettier@3.3.0
+    - shellcheck@0.10.0
     - shfmt@3.6.0
 runtimes:
   enabled:
