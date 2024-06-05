@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.32.0] - 2024-06-05
+
+### Features
+
+- Wip [skip ci]
+- Wip
+- Wip
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.31.1-SNAPSHOT [skip ci]
+- Update branch [skip ci]
+- Remove settings parameter [skip ci]
+- Update parameter name [skip ci]
+- Upgrade trunk [skip ci]
+
+### Build
+
+- Update dockerignore
+
 ## [0.31.0] - 2024-03-21
 
 ### Features
@@ -12,6 +32,7 @@ All notable changes to this project will be documented in this file.
 
 - Update pom version to 0.30.1-SNAPSHOT [skip ci]
 - Update parameters
+- Update for v0.31.0 release [skip ci]
 
 ## [0.30.0] - 2024-03-20
 
