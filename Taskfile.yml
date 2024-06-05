@@ -19,8 +19,8 @@ tasks:
           echo "dev-$(date +%s)"
         fi
   image:
-    summary: Build deployment images
-    desc: Build deployment images
+    summary: Build deployment image
+    desc: Build deployment image
     silent: true
     cmds:
       - |
@@ -45,8 +45,8 @@ tasks:
       TAG:
         sh: task tag
   build:
-    summary: Build Java projects on host
-    desc: Build Java projects on host
+    summary: Build Java project on host
+    desc: Build Java project on host
     cmds:
       - mvn clean install -Denforcer.fail=false
   cosign:

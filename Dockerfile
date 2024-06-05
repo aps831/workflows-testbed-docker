@@ -32,7 +32,7 @@ FROM build AS status
 COPY --from=build /app/EXIT_STATUS_FILE/ /EXIT_STATUS_FILE
 RUN exit $(cat /EXIT_STATUS_FILE)
 
-FROM eclipse-temurin:11@sha256:9de4aabba13e1dd532283497f98eff7bc89c2a158075f0021d536058d3f5a082
+FROM eclipse-temurin:11-jre-focal@sha256:c41afb26202af58e2ab0bc8c07552a18aaebb528fd00dec9beeb02f4c260e24e
 ARG BUILDKIT_SBOM_SCAN_CONTEXT=true
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
 LABEL org.opencontainers.image.source=https://github.com/aps831/workflows-testbed-docker
