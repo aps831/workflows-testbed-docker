@@ -9,3 +9,6 @@ jobs:
   check:
     name: trunk check
     uses: aps831/workflows/.github/workflows/trunk.yaml@master
+    with:
+      java-version: 11
+      install-deps-script: mvn --batch-mode -DskipTests -Denforcer.fail=false clean install

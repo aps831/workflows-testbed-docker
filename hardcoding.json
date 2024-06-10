@@ -40,6 +40,10 @@
         "valuePath": "java",
         "valuePrefix": "adoptopenjdk-",
         "valueSuffix": ".0.20+8"
+      },
+      {
+        "filePath": ".github/workflows/trunk.yaml",
+        "valuePath": ".jobs.check.with.java-version"
       }
     ]
   }
