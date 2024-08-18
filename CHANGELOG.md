@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.33.0] - 2024-08-18
+
+### Bug Fixes
+
+- Use jre image for final docker image [skip ci]
+
+### Features
+
+- Wip [skip ci]
+- Wip
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.32.1-SNAPSHOT [skip ci]
+- Restore branch [skip ci]
+
 ## [0.32.0] - 2024-06-05
 
 ### Features
@@ -17,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Remove settings parameter [skip ci]
 - Update parameter name [skip ci]
 - Upgrade trunk [skip ci]
+- Update for v0.32.0 release [skip ci]
 
 ### Build
 
