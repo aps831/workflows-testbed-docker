@@ -11,6 +11,7 @@ permissions:
   issues: write
   pull-requests: write
   attestations: write
+  id-token: write
 jobs:
   build:
     uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@feat/attestation2 # TODO
