@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.47.0] - 2024-08-18
+
+### Features
+
+- Test13
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.46.1-SNAPSHOT [skip ci]
+
 ## [0.46.0] - 2024-08-18
 
 ### Features
@@ -11,6 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.45.1-SNAPSHOT [skip ci]
+- Update for v0.46.0 release [skip ci]
 
 ## [0.45.0] - 2024-08-18
 
@@ -186,7 +197,6 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-- Test publish
 - Test publish
 
 ### Miscellaneous Tasks
