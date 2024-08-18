@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.34.0] - 2024-08-18
+
+### Features
+
+- Test
+- Test2
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.33.1-SNAPSHOT [skip ci]
+
 ## [0.33.0] - 2024-08-18
 
 ### Bug Fixes
@@ -17,6 +28,7 @@ All notable changes to this project will be documented in this file.
 
 - Update pom version to 0.32.1-SNAPSHOT [skip ci]
 - Restore branch [skip ci]
+- Update for v0.33.0 release [skip ci]
 
 ## [0.32.0] - 2024-06-05
 
