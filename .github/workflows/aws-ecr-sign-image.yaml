@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: AWS ECR Sign Image
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sign:
+    uses: aps831/workflows/.github/workflows/aws-ecr-sign-image.yaml@master
+    with:
+      image: 899431680067.dkr.ecr.eu-west-2.amazonaws.com/aps831/sign@sha256:a146b76eeb4f02c955fc2fa5b4c5cf94d06d70fe973b7dc64b02d40bf115eca0
+      aws-region: eu-west-2
+    secrets:
+      AWS_ROLE_ARN: arn:aws:iam::899431680067:role/OperationsReportsBackendDeploymentRole
+      AWS_SIGNER_PROFILE_ARN: arn:aws:signer:eu-west-2:899431680067:/signing-profiles/notation
