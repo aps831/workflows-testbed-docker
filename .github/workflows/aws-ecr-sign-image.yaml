@@ -4,7 +4,7 @@ name: AWS ECR Sign Image
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  id-token: write
 jobs:
   sign:
     uses: aps831/workflows/.github/workflows/aws-ecr-sign-image.yaml@master
