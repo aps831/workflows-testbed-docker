@@ -3,7 +3,7 @@ version: "3"
 env:
   DOPPLER_PROJECT: "development"
   DOPPLER_CONFIG: "github"
-  LOCAL_REGISTRY: "titan.local:5000"
+  LOCAL_REGISTRY: "registry.local:5000"
   PROJECT: "workflows-testbed-docker"
 tasks:
   # Build
