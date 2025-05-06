@@ -32,14 +32,21 @@ tasks:
         # Clean
         rm -rf target && mkdir target
 
+        # Run socat
+        DOCKER_GATEWAY_HOST=$(ip -4 addr show docker0 | grep -Po 'inet \K[\d.]+')
+        docker run -d -p $DOCKER_GATEWAY_HOST:2375:2375 -v /var/run/docker.sock:/var/run/docker.sock --name socat alpine/socat tcp-listen:2375,reuseaddr,fork unix-connect:/var/run/docker.sock
+
         # Build
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target target --output type=local,dest=target
+        docker build -f Dockerfile . --add-host host.docker.internal:host-gateway --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target target --output type=local,dest=target
 
         # Status
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
+        docker build -f Dockerfile . --add-host host.docker.internal:host-gateway --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --target status
 
         # Image
-        docker build -f Dockerfile . --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+        docker build -f Dockerfile . --add-host host.docker.internal:host-gateway --progress=plain --sbom=false --build-arg MAVEN_PHASE="clean install" --build-arg ENFORCER_FAIL=false --secret id=GITHUB_USER_REF --secret id=GITHUB_TOKEN_REF --provenance=false --tag $LOCAL_REGISTRY/$PROJECT/testbed-docker:{{ .TAG }}
+
+        # Stop socat
+        docker rm -f $(docker ps -aqf "name=^socat$")
 
     vars:
       TAG:

@@ -14,12 +14,16 @@
     </repository>
   </repositories>
   <properties>
-    <!-- pProject -->
+    <!-- Project -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <version.java>11</version.java>
     <version.maven>3.8.2</version.maven>
     <!-- Dependencies -->
+    <version.redis>5.1.5</version.redis>
+    <version.gson>2.11.0</version.gson>
     <version.junit.jupiter>5.9.2</version.junit.jupiter>
+    <version.testcontainers>1.21.0</version.testcontainers>
+    <version.assertj>3.26.3</version.assertj>
     <!-- Plugins -->
     <version.maven-compiler-plugin>3.10.1</version.maven-compiler-plugin>
     <version.surefire-plugin>3.0.0-M9</version.surefire-plugin>
@@ -41,8 +45,38 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${version.redis}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>${version.gson}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers</artifactId>
+      <version>${version.testcontainers}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${version.testcontainers}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${version.assertj}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
