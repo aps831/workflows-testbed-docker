@@ -2,5 +2,6 @@
 .github
 .idea
 .run
+.trunk
 .vscode
 target

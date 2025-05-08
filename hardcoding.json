@@ -4,7 +4,7 @@
     "value": "3.8.2",
     "files": [
       {
-        "filePath": "Dockerfile",
+        "filePath": "Dockerfile.build",
         "valuePath": ".FROM[0]",
         "valuePrefix": "maven:",
         "valueSuffix": "-openjdk",
@@ -25,10 +25,17 @@
     "value": "11",
     "files": [
       {
-        "filePath": "Dockerfile",
+        "filePath": "Dockerfile.build",
         "valuePath": ".FROM[0]",
         "valuePrefix": "openjdk-",
         "valueSuffix": "@",
+        "partialMatch": true
+      },
+      {
+        "filePath": "Dockerfile.prod",
+        "valuePath": ".FROM[0]",
+        "valuePrefix": "eclipse-temurin:",
+        "valueSuffix": "-jre-focal@sha256:",
         "partialMatch": true
       },
       {
