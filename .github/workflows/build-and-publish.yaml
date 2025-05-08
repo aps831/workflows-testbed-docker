@@ -14,7 +14,7 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@feat/socat
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@master
     with:
       image-name: "workflows-testbed-docker"
       templated-files: README.tpl.md
