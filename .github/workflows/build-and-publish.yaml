@@ -14,11 +14,19 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact.yaml@master
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact-v2.yaml@feat/docker
     with:
       image-name: "workflows-testbed-docker"
+      dockerfile-build: Dockerfile.build
+      dockerfile-prod: Dockerfile.prod
+      volumes: |
+        .:/app
+        $HOME/.m2:/home/maven/.m2
+      build-command: mvn --settings settings.xml --batch-mode clean install
       templated-files: README.tpl.md
     secrets:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events
       COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
       COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
+      GITHUB_USER_REF: ${{ github.actor }}
+      GITHUB_TOKEN_REF: ${{ secrets.ACCESS_TOKEN }}
