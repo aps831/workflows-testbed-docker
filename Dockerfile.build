@@ -3,10 +3,9 @@ FROM maven:3.8.2-openjdk-11@sha256:4b9d059560ebaed5bcdd320be71968c457b655887bf04
 ARG BUILDKIT_SBOM_SCAN_CONTEXT=true
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
 ARG DOCKER_GROUP_ID
-
 RUN groupadd -r -g $DOCKER_GROUP_ID docker && useradd -m -l -r -u 1000 -g docker maven
+RUN mkdir /home/maven/.m2
 ENV MAVEN_CONFIG /home/maven/.m2
 ENV MAVEN_OPTS -Duser.home=/home/maven
-
 USER maven
 WORKDIR /app
