@@ -21,7 +21,6 @@ jobs:
       dockerfile-prod: Dockerfile.prod
       volumes: |
         .:/app
-        .m2:/home/maven/.m2
       build-command: mvn --settings settings.xml --batch-mode clean install
       templated-files: README.tpl.md
     secrets:
