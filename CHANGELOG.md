@@ -4,196 +4,212 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.52.0] - 2025-05-11
+
+### Features
+
+- Add redis cache
+- Test ci
+- Test ci again
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+- Test ci
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.51.1-SNAPSHOT [skip ci]
+- Test socat
+- Revert to master for build action
+
+### Build
+
+- Use build container rather than multistage build
+
 ## [0.51.0] - 2024-10-21
 
 ### Features
 
--   Test [skip ci]
--   Wip [skip ci]
+- Test [skip ci]
+- Wip [skip ci]
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.49.1-SNAPSHOT [skip ci]
+- Update pom version to 0.49.1-SNAPSHOT [skip ci]
+- Update for v0.51.0 release [skip ci]
 
 ### Build
 
--   Update docker registry
+- Update docker registry
 
 ## [0.49.0] - 2024-08-25
 
 ### Features
 
--   Test
+- Test
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.48.1-SNAPSHOT [skip ci]
--   Update for v0.49.0 release [skip ci]
+- Update pom version to 0.48.1-SNAPSHOT [skip ci]
+- Update for v0.49.0 release [skip ci]
 
 ## [0.48.0] - 2024-08-18
 
 ### Features
 
--   Test14
+- Test14
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.47.1-SNAPSHOT [skip ci]
--   Update for v0.48.0 release [skip ci]
+- Update pom version to 0.47.1-SNAPSHOT [skip ci]
+- Update for v0.48.0 release [skip ci]
 
 ## [0.47.0] - 2024-08-18
 
 ### Features
 
--   Test13
+- Test13
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.46.1-SNAPSHOT [skip ci]
--   Update for v0.47.0 release [skip ci]
+- Update pom version to 0.46.1-SNAPSHOT [skip ci]
+- Update for v0.47.0 release [skip ci]
 
 ## [0.46.0] - 2024-08-18
 
 ### Features
 
--   Wip
+- Wip
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.45.1-SNAPSHOT [skip ci]
--   Update for v0.46.0 release [skip ci]
+- Update pom version to 0.45.1-SNAPSHOT [skip ci]
+- Update for v0.46.0 release [skip ci]
 
 ## [0.45.0] - 2024-08-18
 
 ### Features
 
--   Test12
+- Test12
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.44.1-SNAPSHOT [skip ci]
--   Update for v0.45.0 release [skip ci]
+- Update pom version to 0.44.1-SNAPSHOT [skip ci]
+- Update for v0.45.0 release [skip ci]
 
 ## [0.44.0] - 2024-08-18
 
 ### Features
 
--   Test11
+- Test11
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.43.1-SNAPSHOT [skip ci]
--   Update for v0.44.0 release [skip ci]
+- Update pom version to 0.43.1-SNAPSHOT [skip ci]
+- Update for v0.44.0 release [skip ci]
 
 ## [0.43.0] - 2024-08-18
 
 ### Features
 
--   Wip
--   Test5
--   Wip
--   Test7
--   Test8
--   Test10
+- Wip
+- Test5
+- Wip
+- Test7
+- Test8
+- Test10
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.37.1-SNAPSHOT [skip ci]
--   Update for v0.43.0 release [skip ci]
+- Update pom version to 0.37.1-SNAPSHOT [skip ci]
+- Update for v0.43.0 release [skip ci]
 
 ## [0.37.0] - 2024-08-18
 
 ### Features
 
--   Test4
+- Test4
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.36.1-SNAPSHOT [skip ci]
--   Update for v0.37.0 release [skip ci]
+- Update pom version to 0.36.1-SNAPSHOT [skip ci]
+- Update for v0.37.0 release [skip ci]
 
 ## [0.36.0] - 2024-08-18
 
 ### Features
 
--   Test4
+- Test4
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.35.1-SNAPSHOT [skip ci]
--   Update for v0.36.0 release [skip ci]
+- Update pom version to 0.35.1-SNAPSHOT [skip ci]
+- Update for v0.36.0 release [skip ci]
 
 ## [0.35.0] - 2024-08-18
 
 ### Features
 
--   Test3
+- Test3
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.34.1-SNAPSHOT [skip ci]
--   Update for v0.35.0 release [skip ci]
+- Update pom version to 0.34.1-SNAPSHOT [skip ci]
+- Update for v0.35.0 release [skip ci]
 
 ## [0.34.0] - 2024-08-18
 
 ### Features
 
--   Test
--   Test2
+- Test
+- Test2
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.33.1-SNAPSHOT [skip ci]
--   Update for v0.34.0 release [skip ci]
+- Update pom version to 0.33.1-SNAPSHOT [skip ci]
+- Update for v0.34.0 release [skip ci]
 
 ## [0.33.0] - 2024-08-18
 
 ### Bug Fixes
 
--   Use jre image for final docker image [skip ci]
+- Use jre image for final docker image [skip ci]
 
 ### Features
 
--   Wip [skip ci]
--   Wip
+- Wip [skip ci]
+- Wip
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.32.1-SNAPSHOT [skip ci]
--   Restore branch [skip ci]
--   Update for v0.33.0 release [skip ci]
+- Update pom version to 0.32.1-SNAPSHOT [skip ci]
+- Restore branch [skip ci]
+- Update for v0.33.0 release [skip ci]
 
 ## [0.32.0] - 2024-06-05
 
 ### Features
 
--   Wip [skip ci]
--   Wip
--   Wip
+- Wip [skip ci]
+- Wip
+- Wip
 
 ### Miscellaneous Tasks
 
--   Update pom version to 0.31.1-SNAPSHOT [skip ci]
--   Update branch [skip ci]
--   Remove settings parameter [skip ci]
--   Update parameter name [skip ci]
--   Upgrade trunk [skip ci]
--   Update for v0.32.0 release [skip ci]
+- Update pom version to 0.31.1-SNAPSHOT [skip ci]
+- Update branch [skip ci]
+- Remove settings parameter [skip ci]
+- Update parameter name [skip ci]
+- Upgrade trunk [skip ci]
+- Update for v0.32.0 release [skip ci]
 
 ### Build
 
--   Update dockerignore
-
-## [0.31.0] - 2024-03-21
-
-### Features
-
--   Test
-
-### Miscellaneous Tasks
-
--   Update pom version to 0.30.1-SNAPSHOT [skip ci]
--   Update parameters
--   Update for v0.31.0 release [skip ci]
+- Update dockerignore
 
 <!-- generated by git-cliff -->
