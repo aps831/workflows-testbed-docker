@@ -14,7 +14,7 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact-v2.yaml@master
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact-v2.yaml@feat/e2e-tests
     with:
       image-name: "workflows-testbed-docker"
       dockerfile-build: Dockerfile.build
@@ -22,6 +22,7 @@ jobs:
       volumes: |
         .:/app
       build-command: mvn --settings settings.xml --batch-mode clean install
+      test-command: mvn --settings settings.xml --batch-mode test -Pe2e
       templated-files: README.tpl.md
     secrets:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events
