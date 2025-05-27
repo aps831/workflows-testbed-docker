@@ -180,4 +180,28 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+      <profile>
+          <id>e2e</id>
+          <build>
+              <plugins>
+                  <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-surefire-plugin</artifactId>
+                      <version>${version.surefire-plugin}</version>
+                      <configuration>
+                          <includes>
+                              <include>e2e/**/When*.java</include>
+                          </includes>
+                          <excludes>
+                              <exclude>unit/**/When*.java</exclude>
+                              <exclude>integration/**/When*.java</exclude>
+                          </excludes>
+                          <reportsDirectory>${project.build.directory}/surefire-e2e-reports</reportsDirectory>
+                      </configuration>
+                  </plugin>
+              </plugins>
+          </build>
+      </profile>
+  </profiles>
 </project>
