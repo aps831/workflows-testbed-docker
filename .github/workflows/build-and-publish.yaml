@@ -22,6 +22,7 @@ jobs:
       volumes: |
         .:/app
       build-command: mvn --settings settings.xml --batch-mode clean install
+      # TODO test-command
       templated-files: README.tpl.md
     secrets:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events

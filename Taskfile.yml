@@ -57,6 +57,9 @@ tasks:
     desc: Build Java project on host
     cmds:
       - mvn clean install -Denforcer.fail=false
+  # TODO add run
+  # TODO add e2e
+
   cosign:
     summary: Create and set cosign password and keys
     desc: Create and set cosign password and keys
