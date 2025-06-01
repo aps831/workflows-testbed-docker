@@ -14,7 +14,7 @@ permissions:
   id-token: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact-v2.yaml@feat/e2e-tests
+    uses: aps831/workflows/.github/workflows/build-and-publish-maven-docker-image-artifact-v2.yaml@master
     with:
       image-name: "workflows-testbed-docker"
       dockerfile-build: Dockerfile.build
