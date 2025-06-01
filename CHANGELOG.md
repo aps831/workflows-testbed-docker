@@ -4,6 +4,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.63.0] - 2025-06-01
+
+### Features
+
+- Test ci
+
+### Miscellaneous Tasks
+
+- Update pom version to 0.62.1-SNAPSHOT [skip ci]
+
 ## [0.62.0] - 2025-06-01
 
 ### Features
@@ -13,6 +23,7 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Update pom version to 0.61.1-SNAPSHOT [skip ci]
+- Update for v0.62.0 release [skip ci]
 
 ## [0.61.0] - 2025-06-01
 
@@ -228,7 +239,6 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-- Test8
 - Test10
 
 ### Miscellaneous Tasks
