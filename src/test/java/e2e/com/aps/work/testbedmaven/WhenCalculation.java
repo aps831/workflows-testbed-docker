@@ -45,7 +45,7 @@ class WhenCalculation {
         String log = container.getLogs(OutputFrame.OutputType.STDOUT);
 
         // Then
-		assertEquals("Calculator: 2 + 1 = 3\n", log,"should say hello, world");
+		assertEquals("Calculator: 2 + 1 = 3\n", log, "should output calculation");
 	}
 
 }

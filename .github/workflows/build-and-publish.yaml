@@ -21,8 +21,7 @@ jobs:
       dockerfile-prod: Dockerfile.prod
       volumes: |
         .:/app
-      # TODO build-command: mvn --settings settings.xml --batch-mode clean install
-      build-command: None
+      build-command: mvn --settings settings.xml --batch-mode clean install
       test-command: mvn --settings settings.xml --batch-mode test -Pe2e
       templated-files: README.tpl.md
     secrets:
