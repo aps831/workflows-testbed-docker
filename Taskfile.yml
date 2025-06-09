@@ -51,11 +51,20 @@ tasks:
         docker push $IMAGE_NAME_LATEST
 
         # Test
-        docker run -v .:/app -v $HOME/.m2:/home/maven/.m2 -v /var/run/docker.sock:/var/run/docker.sock --env GITHUB_USER_REF --env GITHUB_TOKEN_REF --env IMAGE_UNDER_TEST_NAME=$IMAGE_NAME_TAG testbed-docker-builder mvn --settings settings.xml --batch-mode test -Denforcer.fail=false -Pe2e
-
+        docker run -v .:/app -v /tmp:/tmp -v $HOME/.m2:/home/maven/.m2 -v /var/run/docker.sock:/var/run/docker.sock --env GITHUB_USER_REF --env GITHUB_TOKEN_REF --env IMAGE_UNDER_TEST_NAME=$IMAGE_NAME_TAG testbed-docker-builder mvn --settings settings.xml --batch-mode test -Denforcer.fail=false -Pe2e
     vars:
       TAG:
         sh: task tag
+  test:e2e:
+    summary: Test
+    desc: Test
+    silent: true
+    cmds:
+      - |
+        # Test
+        IMAGE_NAME_BUILDER=testbed-docker-builder
+        IMAGE_NAME_LATEST=$LOCAL_REGISTRY/$PROJECT/testbed-docker:latest
+        docker run -v .:/app -v /tmp:/tmp -v $HOME/.m2:/home/maven/.m2 -v /var/run/docker.sock:/var/run/docker.sock --env IMAGE_UNDER_TEST_NAME=$IMAGE_NAME_LATEST $IMAGE_NAME_BUILDER mvn --batch-mode test -Denforcer.fail=false -Pe2e
   build:
     summary: Build Java project on host
     desc: Build Java project on host
