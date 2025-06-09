@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aps.work</groupId>
   <artifactId>testbed-docker</artifactId>
-  <version>0.66.0</version>
+  <version>0.66.1-SNAPSHOT</version>
   <repositories>
     <repository>
       <id>github-aps831</id>
