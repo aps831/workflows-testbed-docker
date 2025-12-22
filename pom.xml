@@ -139,9 +139,6 @@
           </execution>
         </executions>
         <configuration>
-          <systemPropertyVariables>
-            <api.version>1.44</api.version>
-          </systemPropertyVariables>
           <includes>
             <include>integration/**/When*.java</include>
           </includes>
@@ -198,9 +195,6 @@
                       <artifactId>maven-surefire-plugin</artifactId>
                       <version>${version.surefire-plugin}</version>
                       <configuration>
-                          <systemPropertyVariables>
-                            <api.version>1.44</api.version>
-                          </systemPropertyVariables>
                           <includes>
                               <include>e2e/**/When*.java</include>
                           </includes>
