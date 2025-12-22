@@ -22,7 +22,7 @@
     <version.redis>5.1.5</version.redis>
     <version.gson>2.11.0</version.gson>
     <version.junit.jupiter>5.9.2</version.junit.jupiter>
-    <version.testcontainers>1.21.0</version.testcontainers>
+    <version.testcontainers>2.0.2</version.testcontainers>
     <version.assertj>3.26.3</version.assertj>
     <!-- Plugins -->
     <version.maven-compiler-plugin>3.10.1</version.maven-compiler-plugin>
@@ -74,7 +74,7 @@
     </dependency>
     <dependency>
       <groupId>org.testcontainers</groupId>
-      <artifactId>junit-jupiter</artifactId>
+      <artifactId>testcontainers-junit-jupiter</artifactId>
       <version>${version.testcontainers}</version>
       <scope>test</scope>
     </dependency>
