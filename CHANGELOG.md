@@ -1,6 +1,16 @@
 <!-- markdownlint-disable MD024 -->
 
-## [0.67.0] - 2025-12-22
+## [0.68.0] - 2025-12-23
+
+### 🚀 Features
+
+- Add volume for pwd
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.67.1-SNAPSHOT [skip ci]
+
+## [0.67.0] - 2025-12-23
 
 ### 🚀 Features
 
@@ -13,6 +23,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.66.1-SNAPSHOT [skip ci]
+- Update for v0.67.0 release [skip ci]
 
 ## [0.66.0] - 2025-06-09
 
@@ -244,14 +255,3 @@
 
 - Update pom version to 0.47.1-SNAPSHOT [skip ci]
 - Update for v0.48.0 release [skip ci]
-
-## [0.47.0] - 2024-08-18
-
-### 🚀 Features
-
-- Test13
-
-### ⚙️ Miscellaneous Tasks
-
-- Update pom version to 0.46.1-SNAPSHOT [skip ci]
-- Update for v0.47.0 release [skip ci]
