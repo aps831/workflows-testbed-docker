@@ -1,113 +1,124 @@
 <!-- markdownlint-disable MD024 -->
 
-# Changelog
+## [0.67.0] - 2025-12-22
 
-All notable changes to this project will be documented in this file.
+### 🚀 Features
+
+- Test export of control environment variables
+- Bump testcontainers version
+- Set api version for docker
+- Remove api version
+- Use master branch
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.66.1-SNAPSHOT [skip ci]
 
 ## [0.66.0] - 2025-06-09
 
-### Features
+### 🚀 Features
 
 - Add tmp volume when running e2e tests
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.65.1-SNAPSHOT [skip ci]
+- Update for v0.66.0 release [skip ci]
 
 ## [0.65.0] - 2025-06-08
 
-### Features
+### 🚀 Features
 
 - Add push of images [skip ci]
 
-### Miscellaneous Tasks
+### 💼 Other
+
+- Split junit into api and engine
+
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.64.1-SNAPSHOT [skip ci]
 - Update for v0.65.0 release [skip ci]
 
-### Build
-
-- Split junit into api and engine
-
 ## [0.64.0] - 2025-06-02
 
-### Bug Fixes
-
-- Test test output
-
-### Features
+### 🚀 Features
 
 - Test exit status
 - Test exit status
 - Reinstate test command
 
-### Miscellaneous Tasks
+### 🐛 Bug Fixes
+
+- Test test output
+
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.63.1-SNAPSHOT [skip ci]
 - Update for v0.64.0 release [skip ci]
 
 ## [0.63.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.62.1-SNAPSHOT [skip ci]
 - Update for v0.63.0 release [skip ci]
 
 ## [0.62.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.61.1-SNAPSHOT [skip ci]
 - Update for v0.62.0 release [skip ci]
 
 ## [0.61.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.60.1-SNAPSHOT [skip ci]
 - Update for v0.61.0 release [skip ci]
 
 ## [0.60.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.59.1-SNAPSHOT [skip ci]
 - Update for v0.60.0 release [skip ci]
 
 ## [0.59.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.58.1-SNAPSHOT [skip ci]
 - Update for v0.59.0 release [skip ci]
 
 ## [0.58.0] - 2025-06-01
 
-### Features
+### 🚀 Features
 
 - Add e2e test
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.57.1-SNAPSHOT [skip ci]
 - Set branch to master [skip ci]
@@ -115,62 +126,62 @@ All notable changes to this project will be documented in this file.
 
 ## [0.57.0] - 2025-05-25
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.56.1-SNAPSHOT [skip ci]
 - Update for v0.57.0 release [skip ci]
 
 ## [0.56.0] - 2025-05-25
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.55.1-SNAPSHOT [skip ci]
 - Update for v0.56.0 release [skip ci]
 
 ## [0.55.0] - 2025-05-22
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.54.1-SNAPSHOT [skip ci]
 - Update for v0.55.0 release [skip ci]
 
 ## [0.54.0] - 2025-05-15
 
-### Features
+### 🚀 Features
 
 - Add user to production dockerfile
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.53.1-SNAPSHOT [skip ci]
 - Update for v0.54.0 release [skip ci]
 
 ## [0.53.0] - 2025-05-12
 
-### Features
+### 🚀 Features
 
 - Test ci
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.52.1-SNAPSHOT [skip ci]
 - Update for v0.53.0 release [skip ci]
 
 ## [0.52.0] - 2025-05-11
 
-### Features
+### 🚀 Features
 
 - Add redis cache
 - Test ci
@@ -185,75 +196,62 @@ All notable changes to this project will be documented in this file.
 - Test ci
 - Test ci
 
-### Miscellaneous Tasks
+### 💼 Other
+
+- Use build container rather than multistage build
+
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.51.1-SNAPSHOT [skip ci]
 - Test socat
 - Revert to master for build action
 - Update for v0.52.0 release [skip ci]
 
-### Build
-
-- Use build container rather than multistage build
-
 ## [0.51.0] - 2024-10-21
 
-### Features
+### 🚀 Features
 
 - Test [skip ci]
 - Wip [skip ci]
 
-### Miscellaneous Tasks
+### 💼 Other
+
+- Update docker registry
+
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.49.1-SNAPSHOT [skip ci]
 - Update for v0.51.0 release [skip ci]
 
-### Build
-
-- Update docker registry
-
 ## [0.49.0] - 2024-08-25
 
-### Features
+### 🚀 Features
 
 - Test
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.48.1-SNAPSHOT [skip ci]
 - Update for v0.49.0 release [skip ci]
 
 ## [0.48.0] - 2024-08-18
 
-### Features
+### 🚀 Features
 
 - Test14
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.47.1-SNAPSHOT [skip ci]
 - Update for v0.48.0 release [skip ci]
 
 ## [0.47.0] - 2024-08-18
 
-### Features
+### 🚀 Features
 
 - Test13
 
-### Miscellaneous Tasks
+### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.46.1-SNAPSHOT [skip ci]
 - Update for v0.47.0 release [skip ci]
-
-## [0.46.0] - 2024-08-18
-
-### Features
-
-- Wip
-
-### Miscellaneous Tasks
-
-- Update pom version to 0.45.1-SNAPSHOT [skip ci]
-- Update for v0.46.0 release [skip ci]
-
-<!-- generated by git-cliff -->
