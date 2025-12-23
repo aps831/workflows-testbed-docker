@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.5
-FROM eclipse-temurin:11-jre-focal@sha256:c41afb26202af58e2ab0bc8c07552a18aaebb528fd00dec9beeb02f4c260e24e
+FROM eclipse-temurin:19-jre-focal@sha256:4f646d9ba7737e089a937d7a40427f8757f366829a03937b37112e2db5264b54
 LABEL org.opencontainers.image.source=https://github.com/aps831/workflows-testbed-docker
 ARG BUILDKIT_SBOM_SCAN_CONTEXT=true
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
