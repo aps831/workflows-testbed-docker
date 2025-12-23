@@ -8,4 +8,3 @@ RUN groupadd -g "${GROUP_ID}" maven && useradd --create-home --no-log-init -u "$
 ENV MAVEN_CONFIG /home/maven/.m2
 ENV MAVEN_OPTS -Duser.home=/home/maven
 USER maven
-WORKDIR /app

@@ -19,8 +19,6 @@ jobs:
       image-name: "workflows-testbed-docker"
       dockerfile-build: Dockerfile.build
       dockerfile-prod: Dockerfile.prod
-      volumes: |
-        .:/app
       build-command: mvn --settings settings.xml --batch-mode clean install
       test-command: mvn --settings settings.xml --batch-mode test -Pe2e
       templated-files: README.tpl.md
