@@ -1,5 +1,17 @@
 <!-- markdownlint-disable MD024 -->
 
+## [0.69.0] - 2025-12-24
+
+### 🚀 Features
+
+- Set enforcer fail
+- Try again
+- Use dollar for environment variables
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.68.1-SNAPSHOT [skip ci]
+
 ## [0.68.0] - 2025-12-23
 
 ### 🚀 Features
@@ -9,6 +21,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.67.1-SNAPSHOT [skip ci]
+- Update for v0.68.0 release [skip ci]
 
 ## [0.67.0] - 2025-12-23
 
@@ -244,14 +257,3 @@
 
 - Update pom version to 0.48.1-SNAPSHOT [skip ci]
 - Update for v0.49.0 release [skip ci]
-
-## [0.48.0] - 2024-08-18
-
-### 🚀 Features
-
-- Test14
-
-### ⚙️ Miscellaneous Tasks
-
-- Update pom version to 0.47.1-SNAPSHOT [skip ci]
-- Update for v0.48.0 release [skip ci]
