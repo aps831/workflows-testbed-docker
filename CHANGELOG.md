@@ -1,5 +1,16 @@
 <!-- markdownlint-disable MD024 -->
 
+## [0.70.0] - 2025-12-24
+
+### 🚀 Features
+
+- Add snapshot dependency
+- Remove snapshot dependency
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.69.1-SNAPSHOT [skip ci]
+
 ## [0.69.0] - 2025-12-24
 
 ### 🚀 Features
@@ -11,6 +22,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.68.1-SNAPSHOT [skip ci]
+- Update for v0.69.0 release [skip ci]
 
 ## [0.68.0] - 2025-12-23
 
@@ -246,14 +258,3 @@
 
 - Update pom version to 0.49.1-SNAPSHOT [skip ci]
 - Update for v0.51.0 release [skip ci]
-
-## [0.49.0] - 2024-08-25
-
-### 🚀 Features
-
-- Test
-
-### ⚙️ Miscellaneous Tasks
-
-- Update pom version to 0.48.1-SNAPSHOT [skip ci]
-- Update for v0.49.0 release [skip ci]
