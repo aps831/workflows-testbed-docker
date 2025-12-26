@@ -1,5 +1,15 @@
 <!-- markdownlint-disable MD024 -->
 
+## [0.71.0] - 2025-12-26
+
+### 🚀 Features
+
+- Test multiple commands
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.70.1-SNAPSHOT [skip ci]
+
 ## [0.70.0] - 2025-12-24
 
 ### 🚀 Features
@@ -10,6 +20,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.69.1-SNAPSHOT [skip ci]
+- Update for v0.70.0 release [skip ci]
 
 ## [0.69.0] - 2025-12-24
 
@@ -247,7 +258,6 @@
 
 ### 🚀 Features
 
-- Test [skip ci]
 - Wip [skip ci]
 
 ### 💼 Other
@@ -256,5 +266,4 @@
 
 ### ⚙️ Miscellaneous Tasks
 
-- Update pom version to 0.49.1-SNAPSHOT [skip ci]
 - Update for v0.51.0 release [skip ci]
