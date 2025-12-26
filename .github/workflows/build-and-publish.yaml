@@ -19,12 +19,10 @@ jobs:
       image-name: "workflows-testbed-docker"
       dockerfile-build: Dockerfile.build
       dockerfile-prod: Dockerfile.prod
-      build-command:
-        mvn --settings settings.xml --batch-mode -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE clean
-        install
-      test-command:
-        mvn --settings settings.xml --batch-mode -Pe2e -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE
-        test
+      build-commands: |
+        mvn --settings settings.xml --batch-mode -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE clean install
+      test-commands: |
+        mvn --settings settings.xml --batch-mode -Pe2e -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE test
       templated-files: README.tpl.md
     secrets:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # GITHUB_TOKEN will not fire 'release' and 'registry_package' events
