@@ -21,6 +21,7 @@ jobs:
       dockerfile-prod: Dockerfile.prod
       build-commands: |
         mvn --settings settings.xml --batch-mode -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE clean install
+        echo "hello, world"
       test-commands: |
         mvn --settings settings.xml --batch-mode -Pe2e -Denforcer.fail=$WORKFLOW_CONTROL_RELEASE test
       templated-files: README.tpl.md
