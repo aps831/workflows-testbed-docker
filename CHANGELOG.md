@@ -1,5 +1,16 @@
 <!-- markdownlint-disable MD024 -->
 
+## [0.72.0] - 2025-12-26
+
+### 🚀 Features
+
+- Test multiline command
+- Another try with a multiline command
+
+### ⚙️ Miscellaneous Tasks
+
+- Update pom version to 0.71.1-SNAPSHOT [skip ci]
+
 ## [0.71.0] - 2025-12-26
 
 ### 🚀 Features
@@ -9,6 +20,7 @@
 ### ⚙️ Miscellaneous Tasks
 
 - Update pom version to 0.70.1-SNAPSHOT [skip ci]
+- Update for v0.71.0 release [skip ci]
 
 ## [0.70.0] - 2025-12-24
 
@@ -253,17 +265,3 @@
 - Test socat
 - Revert to master for build action
 - Update for v0.52.0 release [skip ci]
-
-## [0.51.0] - 2024-10-21
-
-### 🚀 Features
-
-- Wip [skip ci]
-
-### 💼 Other
-
-- Update docker registry
-
-### ⚙️ Miscellaneous Tasks
-
-- Update for v0.51.0 release [skip ci]
