@@ -23,7 +23,7 @@
     <version.gson>2.11.0</version.gson>
     <version.junit.jupiter>5.9.2</version.junit.jupiter>
     <version.testcontainers>2.0.2</version.testcontainers>
-    <version.assertj>3.26.3</version.assertj>
+    <version.assertj>3.27.7</version.assertj>
     <!-- Plugins -->
     <version.maven-compiler-plugin>3.10.1</version.maven-compiler-plugin>
     <version.surefire-plugin>3.0.0-M9</version.surefire-plugin>
